@@ -1,6 +1,6 @@
 const Apify = require('apify');
 
-Apify.main(async () => {
+(async () => {
     const input = await Apify.getInput();
     const asin = input.asin;
 
@@ -54,6 +54,6 @@ Apify.main(async () => {
     } catch (error) {
         console.error('❌ ERROR during execution:', error);
         await browser.close();
-        throw error; // 에러를 다시 throw해서 Apify가 실패 로그 남기게 함
+        throw error;
     }
-});
+})();
