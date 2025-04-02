@@ -1,0 +1,10 @@
+{
+    "name": "actor-star-rating",
+    "version": "1.0.0",
+    "type": "module",
+    "dependencies": {
+      "apify": "^3.4.0",
+      "crawlee": "^3.13.0"
+    }
+  }
+  
