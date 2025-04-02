@@ -1,6 +1,14 @@
 import { Actor } from 'apify';
 import { launchPuppeteer } from 'crawlee';
 
+process.on('unhandledRejection', reason => {
+    console.error('UNHANDLED REJECTION:', reason);
+});
+
+process.on('uncaughtException', err => {
+    console.error('UNCAUGHT EXCEPTION:', err);
+});
+
 await Actor.init();
 
 const input = await Actor.getInput();
