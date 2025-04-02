@@ -50,4 +50,13 @@ try {
         asin,
         starBreakdown: starCounts,
         totalReviewCount: total,
-        calculatedAverageRating: average ? parse
+        calculatedAverageRating: average ? parseFloat(average) : null
+    });
+
+} catch (error) {
+    console.error('❌ ERROR during execution:', error);
+    await browser.close();
+    throw error;
+}
+
+await Actor.exit();
